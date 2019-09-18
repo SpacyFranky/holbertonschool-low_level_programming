@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 /**
 * main - Entry point
 * hello
@@ -6,6 +6,6 @@
 */
 int main(void)
 {
-fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+system("echo and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 return (1);
 }
