@@ -6,13 +6,18 @@
 */
 int main(void)
 {
-int i;
-for (i = '48' ; i <= '57' ; i++)
+int n;
+n = 0;
+while (n <= 9)
 {
-putchar (i);
-putchar (44);
-putchar (32);
+putchar(n + '0');
+if (n < 9)
+{
+putchar(',');
+putchar(' ');
 }
-putchar ('\n');
+n++;
+}
+putchar('\n');
 return (0);
 }
