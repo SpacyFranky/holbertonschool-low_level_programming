@@ -2,11 +2,10 @@
 /**
 * print_last_digit - check the code for Holberton School students.
 * @n : variable
-* Return: Always 0.
+* Return: same variable as input.
 */
 int print_last_digit(int n)
 {
-int n;
 if (n < 0)
 {
 n = -n;
