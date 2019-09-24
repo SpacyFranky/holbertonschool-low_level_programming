@@ -1,10 +1,24 @@
 #include "holberton"
 /**
-* main - check the code for Holberton School students.
+* jack_bauer - check the code for Holberton School students.
 *
-* Return: Always 0.
+* Return: Void.
 */
 void jack_bauer(void)
 {
-   
+int i = 0;
+while (i <= 23)
+{
+int j = 0;
+while (j <= 59)
+{
+_putchar(i % 10 + '0');
+_putchar(i / 10 + '0');
+_putchar(':');
+_putchar(j % 10 + '0');
+_putchar(j / 10 + '0');
+_putchar('\n');
+}
+}
+return;
 }
