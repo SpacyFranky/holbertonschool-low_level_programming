@@ -1,18 +1,20 @@
 #include "holberton.h"
 /**
 * times_table - check the code for Holberton School students.
-*
+* void function
 * Return: Void.
 */
 void times_table(void)
 {
-for (int i = 0 ; i <= 9 ; i++)
+int i = 0;
+while (i <= 9)
 {
-for (int j = 0 ; j <= 9 ; j++)
+int j = 0;
+while (j <= 9)
 {
 int n;
 n = i * j;
-if (n > 10)
+if (n >= 10)
 {
 _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
@@ -30,7 +32,9 @@ _putchar(' ');
 _putchar(' ');
 }
 }
+j++;
 }
+i++;
 _putchar('\n');
 }
 return;
