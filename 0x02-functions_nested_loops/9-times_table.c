@@ -22,7 +22,13 @@ _putchar(n + '0');
 if (j < 9)
 {
 _putchar(',');
+if (n >= 10)
 _putchar(' ');
+else
+{
+_putchar(' ');
+_putchar(' ');
+}
 }
 }
 _putchar('\n');
