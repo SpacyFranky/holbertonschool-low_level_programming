@@ -42,7 +42,7 @@ _putchar(',');
 _putchar(' ');
 _putchar(m / 100 + '0');
 _putchar((m % 100) / 10 + '0');
-_putchar((m % 100) % 10 + '0');
+_putchar((m % 10 + '0');
 }
 }
 }
