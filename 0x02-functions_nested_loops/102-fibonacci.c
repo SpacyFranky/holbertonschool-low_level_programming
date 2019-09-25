@@ -18,5 +18,6 @@ i = j;
 j = s;
 printf("%li, ", s);
 }
+printf("\n");
 return (0);
 }
