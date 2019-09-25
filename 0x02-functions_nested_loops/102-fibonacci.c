@@ -18,4 +18,5 @@ i = j;
 j = s;
 printf("%li, ", s);
 }
+return (0);
 }
