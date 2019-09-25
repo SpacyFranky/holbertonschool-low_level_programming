@@ -6,11 +6,7 @@
 */
 void print_times_table(int n)
 {
-int i;
-int j;
-int m;
-int a;
-int b;
+int i,j,m;
 if (n >= 0 && n <= 15)
 {
 for (i = 0; i <= n; i++)
@@ -44,11 +40,9 @@ else
 {
 _putchar(',');
 _putchar(' ');
-a = m / 100;
-b = m % 100;
-_putchar(a + '0');
-_putchar(b / 10 + '0');
-_putchar(b % 10 + '0');
+_putchar(m / 100 + '0');
+ _putchar((m % 100) / 10 + '0');
+ _putchar((m % 100) % 10 + '0');
 }
 }
 }
