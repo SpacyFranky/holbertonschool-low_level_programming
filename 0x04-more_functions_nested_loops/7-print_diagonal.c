@@ -4,13 +4,12 @@
 * @n : variable
 * Return: nothing.
 */
-void print_line(int n)
+void print_diagonal(int n)
 {
-int i;
+int i, j;
 if (n <= 0)
 {
 _putchar('\n');
-return;
 }
 else
 {
