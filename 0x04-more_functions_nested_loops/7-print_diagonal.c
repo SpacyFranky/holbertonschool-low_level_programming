@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* print_line - draws a straight line in the terminal.
+* print_diagonal - draws a straight line in the terminal.
 * @n : variable
 * Return: nothing.
 */
@@ -10,6 +10,7 @@ int i, j;
 if (n <= 0)
 {
 _putchar('\n');
+return;
 }
 else
 {
@@ -29,5 +30,4 @@ _putchar(' ');
 _putchar('\n');
 }
 }
-_putchar('\n');
 }
