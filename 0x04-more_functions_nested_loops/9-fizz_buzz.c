@@ -4,7 +4,7 @@
 *
 * Return: void.
 */
-int main(void)
+void main(void)
 {
 int i;
 for (i = 1 ; i <= 100 ; i++)
@@ -19,5 +19,4 @@ else
 printf("%d ", i);
 }
 printf("\n");
-return (0);
 }
