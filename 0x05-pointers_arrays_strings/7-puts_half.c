@@ -15,8 +15,8 @@ l++;
 }
 if (l % 2 == 0)
 {
-n = l / 2;
-for (i = n ; i < l ; i++)
+n = (l / 2) - 1;
+for (i = n + 1 ; i < l ; i++)
 {
 _putchar(str[i]);
 }
