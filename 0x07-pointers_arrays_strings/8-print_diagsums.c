@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * print_diagsums - prints the sum of the two diagonals of a square matrix.
  * @a : multi-dimensional array
@@ -7,22 +8,22 @@
  */
 void print_diagsums(int *a, int size)
 {
-int i, j, s1, s2;
+int x;
+int i, s1, s2;
+x = size * size;
 s1 = 0;
 s2 = 0;
-for (i = 0 ; i < size ; i++)
+i = 0;
+while (i < x)
 {
-for (j = 0 ; j < size ; j++)
+s1 += a[i];
+i += size +1;
+}
+i = size - 1;
+while (i < (x - 1))
 {
-if (i == j)
-s1 += a[i][j];
-if (i + j == size - 1)
-s2 += a[i][j];
+s2 += a[i];
+i += size - 1;
 }
-}
-_putchar(s1 + '0');
-_putchar(',');
-_putchar(' ');
-_putchar(s2 + '0');
-_putchar('\n');
+printf("%d, %d\n", s1, s2);
 }
