@@ -17,7 +17,7 @@ i = 0;
 while (i < x)
 {
 s1 += a[i];
-i += size +1;
+i += size + 1;
 }
 i = size - 1;
 while (i < (x - 1))
