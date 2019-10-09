@@ -12,7 +12,7 @@ return (0);
 else if (i >= n)
 return (1);
 if (n % i != 0 && i != n)
-return (prime(i + 1, n));
+return (prime(n, i + 1));
 else
 return (0);
 }
