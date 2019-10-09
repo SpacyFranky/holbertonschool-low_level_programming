@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * primetest - check the code for Holberton School students.
+ * prime - checks the number if it's prime or not.
  * @n : variable
  * @i : variable
  * Return: 1 or 0.
