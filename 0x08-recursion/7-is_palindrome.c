@@ -22,10 +22,10 @@ int palindrome(char *s, int start, int end)
 {
 if (s[start] != s[end])
 return (0);
-else if (start >= end)
+else if (start > end)
 return (1);
-else
-return (palindrome(s, start + 1, end + 1));
+palindrome(s, start + 1, end - 1);
+return (1);
 }
 /**
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
@@ -36,5 +36,5 @@ int is_palindrome(char *s)
 {
 int l;
 l = length(s);
-return (palindrome(s, 0, l));
+return (palindrome(s, 0, l - 1));
 }
