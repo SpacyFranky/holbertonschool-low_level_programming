@@ -4,7 +4,7 @@
  * main - adds positive numbers.
  * @argc : argument count.
  * @argv : argument vector.
- * Return: is 0 / prints the sum of the numbers.
+ * Return: 0 or 1.
  */
 
 int main(int argc, char *argv[])
@@ -13,7 +13,7 @@ int i, s, a;
 if (argc == 1)
 {
 printf("0\n");
-return (-1)
+return (-1);
 }
 else
 {
@@ -21,7 +21,7 @@ s = 0;
 for (i = 1 ; i < argc ; i++)
 {
 a = atoi(argv[i]);
-if (a <= 0)
+if (a < 0)
 {
 printf("Error\n");
 break;
@@ -29,7 +29,7 @@ break;
 else
 s = s + a;
 }
-if (!(a <= 0))
+if (!(a < 0))
 {
 printf("%d\n", s);
 return (0);
