@@ -13,6 +13,7 @@ int i, s, a;
 if (argc == 1)
 {
 printf("0\n");
+return (-1)
 }
 else
 {
