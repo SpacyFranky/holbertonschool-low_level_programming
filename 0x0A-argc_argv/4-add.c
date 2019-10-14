@@ -9,32 +9,20 @@
 
 int main(int argc, char *argv[])
 {
-int i, s, a;
-if (argc == 1)
-{
-printf("0\n");
-return (-1);
-}
-else
-{
-s = 0;
+int i, digit, sum;
+sum = 0;
 for (i = 1 ; i < argc ; i++)
 {
-a = atoi(argv[i]);
-if (a < 0)
+for (digit = 0 ; argv[i][digit] ; digit++)
+{
+if (argv[i][digit] < '0' || argv[i][digit] > '9')
 {
 printf("Error\n");
-break;
-}
-else
-s = s + a;
-}
-if (!(a < 0))
-{
-printf("%d\n", s);
-return (0);
-}
-else
 return (1);
 }
+}
+sum += atoi(argv[i]);
+}
+printf("%d\n", sum);
+return (0);
 }
