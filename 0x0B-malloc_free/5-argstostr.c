@@ -15,11 +15,12 @@ if (ac == 0 || av == NULL)
 return (NULL);
 for (i = 0 ; i < ac ; i++)
 {
-l = 0;
 for (j = 0 ; av[i][j] != '\0' ; j++)
 l++;
 }
 s = malloc(sizeof(char) * ac + l + 1);
+if (s == NULL)
+return (NULL);
 l = 0;
 for (i = 0 ; i < ac ; i++)
 {
