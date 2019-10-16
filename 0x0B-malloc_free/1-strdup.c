@@ -19,7 +19,7 @@ if (str != NULL)
 ch = malloc(l *sizeof(char));
 if (ch != NULL)
 {
-for (i = 0 ; i < l ; i++)
+for (i = 0 ; i <= l ; i++)
 ch[i] = str[i];
 return (ch);
 free(ch);
