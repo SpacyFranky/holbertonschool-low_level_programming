@@ -23,7 +23,7 @@ if (ch == NULL)
 return (NULL);
 for (i = 0 ; i < l1 ; i++)
 ch[i] = s1[i];
-for (i = 0 ; i < l2 ; i++)
+for (i = 0 ; i <= l2 ; i++)
 ch[l1 + i] = s2[i];
 ch[l1 + i] = '\0';
 return (ch);
