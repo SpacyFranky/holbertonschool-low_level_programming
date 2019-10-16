@@ -13,8 +13,6 @@ char *s;
 int i, j, l;
 if (ac == 0 || av == 0)
 return (NULL);
-if (s == 0)
-return (NULL);
 for (i = 0 ; i < ac ; i++)
 {
 l = 0;
