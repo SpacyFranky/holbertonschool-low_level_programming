@@ -16,11 +16,12 @@ for (i = 0 ; str[i] != 0 ; i++)
 l++;
 if (str != NULL)
 {
-ch = (char *)malloc(sizeof(char) * l + 1);
+ch = (char *)malloc(sizeof(char) * (l + 1));
 if (ch == NULL)
 return (NULL);
 for (i = 0 ; i <= l ; i++)
 ch[i] = str[i];
+ch[i] = '\0';
 return (ch);
 }
 else
