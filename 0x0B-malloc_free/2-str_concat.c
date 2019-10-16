@@ -10,14 +10,15 @@ char *str_concat(char *s1, char *s2)
 {
 char *ch;
 int i, j, l1, l2;
-if (s1 == '\0' && s2 == '\0')
-return (NULL);
+if (s1 != NULL && s2 != NULL)
+{
 l1 = 0;
 for (i = 0 ; s1[i] != 0 ; i++)
 l1++;
 l2 = 0;
 for (i = 0 ; s2[i] != 0 ; i++)
 l2++;
+}
 ch = malloc(sizeof(char) * (l1 + l2 + 1));
 if (ch == NULL)
 return (NULL);
