@@ -25,7 +25,6 @@ return (ch);
 }
 else
 return (NULL);
-free(ch);
 }
 else
 return (NULL);
