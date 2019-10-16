@@ -21,12 +21,17 @@ l2++;
 ch = malloc(sizeof(char) * (l1 + l2 + 1));
 if (ch == NULL)
 return (NULL);
-for (i = 0 ; i < l1 ; i++)
+i = 0;
+while (i < l1)
+{
 ch[i] = s1[i];
-j = 0 ;
-for (i = l1 ; i < l1 + l2 ; i++)
+i++;
+}
+j = 0;
+while (i < l1 + l2)
 {
 ch[i] = s2[j];
+i++;
 j++;
 }
 ch[i] = '\0';
