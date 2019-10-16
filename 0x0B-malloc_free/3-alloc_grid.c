@@ -12,12 +12,12 @@ int **a;
 int i, j, k;
 if (width <= 0 || height <= 0)
 return (NULL);
-a = (int **)malloc(width * sizeof(int *));
-if (a == 0)
-return(NULL);
-for (i = 0 ; i < width ; i++)
+a = (int **)malloc(height * sizeof(int *));
+if (a == '\0')
+return (NULL);
+for (i = 0 ; i < height ; i++)
 {
-a[i] = (int *)malloc(height * sizeof(int));
+a[i] = (int *)malloc(width * sizeof(int));
 if (a[i] == NULL)
 {
 for (k = 0 ; k < i ; k++)
@@ -25,7 +25,7 @@ free(a[k]);
 free(a);
 return (NULL);
 }
-for (j = 0 ; j < height ; j++)
+for (j = 0 ; j < width ; j++)
 a[i][j] = 0;
 }
 return (a);
