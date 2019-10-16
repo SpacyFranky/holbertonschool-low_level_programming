@@ -17,11 +17,12 @@ l++;
 if (str != NULL)
 {
 ch = malloc(l *sizeof(char));
-if (ch != 0)
+if (ch != NULL)
 {
 for (i = 0 ; i < l ; i++)
 ch[i] = str[i];
 return (ch);
+free(ch);
 }
 else
 return (NULL);
