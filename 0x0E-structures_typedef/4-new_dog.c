@@ -44,6 +44,4 @@ a->name = name;
 a->age = age;
 a->owner = owner;
 return (a);
-free(n);
-free(o);
 }
