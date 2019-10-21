@@ -39,7 +39,7 @@ dog_t *a;
 char *n, *o;
 n = _strdup(name);
 o = _strdup(owner);
-a = malloc(sizeof(dog_t) * 10);
+a = malloc(sizeof(dog_t));
 a->name = name;
 a->age = age;
 a->owner = owner;
