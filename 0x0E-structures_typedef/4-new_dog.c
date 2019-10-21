@@ -35,6 +35,7 @@ a->name[i] = name[i];
 a->name[i] = name[i];
 for (i = 0 ; i < l2 ; i++)
 a->owner[i] = owner[i];
+a->owner[i] = owner[i];
 a->age = age;
 return (a);
 }
