@@ -1,30 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-/**
- * *_strdup - returns a pointer to a newly allocated space
- *    in memory, which contains a copy of the string given as
- *   a parameter.
- * @str : string
- * Return: string
- */
-char *_strdup(char *str)
-{
-char *ch;
-int l, i;
-if (str == 0)
-return (NULL);
-l = 0;
-for (i = 0 ; str[i] != 0 ; i++)
-l++;
-l++;
-ch = malloc(sizeof(char) * l);
-if (ch == NULL)
-return (NULL);
-for (i = 0 ; i < l ; i++)
-ch[i] = str[i];
-ch[i] = '\0';
-return (ch);
-}
 
 /**
  * *new_dog - creates a new dog.
@@ -36,12 +11,30 @@ return (ch);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *a;
-char *n, *o;
-n = _strdup(name);
-o = _strdup(owner);
-a = malloc(sizeof(dog_t) * (sizeof(n) + sizeof(o) + 2));
-a->name = name;
+int l1, l2, i;
+l1 = 0;
+l2 = 0;
+a = malloc(sizeof(dog_t));
+if (a == NULL)
+return (NULL);
+while (name[l1] != '\0')
+l1++;
+while (owner[l2] != '\0')
+l2++;
+a->name = malloc(sizeof(char) * (l1 + 1));
+a->owner = malloc(sizeof(char) * (l2 + 1));
+if (a->name == NULL || a->owner == NULL)
+{
+free(a->name);
+free(a->owner);
+free(a);
+return (NULL);
+}
+for (i = 0 ; i < l1 ; i++)
+a->name[i] = name[i];
+a->name[i] = name[i];
+for (i = 0 ; i < l2 ; i++)
+a->owner[i] = owner[i];
 a->age = age;
-a->owner = owner;
 return (a);
 }
