@@ -17,7 +17,6 @@ op_t ops[] = {
 {NULL, NULL}
 };
 int i;
-int (*p)(int, int);
 
 i = 0;
 while ((ops[i].op != NULL))
@@ -26,6 +25,5 @@ if (strcmp(s, ops[i].op) == 0)
 break;
 i++;
 }
-p = ops[i].f;
-return (p);
+return (ops[i].f);
 }
