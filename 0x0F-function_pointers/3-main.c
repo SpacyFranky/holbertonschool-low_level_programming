@@ -25,14 +25,14 @@ if (s == NULL)
 printf("Error\n");
 exit(99);
 }
+a = atoi(argv[1]);
+b = atoi(argv[3]);
 if ((!(strcmp(argv[2], "/") == 0) || (!strcmp(argv[2], "%")) == 0)
-&& (argv[3] == 0))
+&& (b == 0))
 {
 printf("Error\n");
 exit(100);
 }
-a = atoi(argv[1]);
-b = atoi(argv[3]);
 result = s(a, b);
 printf("%d\n", result);
 }
