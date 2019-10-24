@@ -11,7 +11,7 @@ return (a + b);
 }
 
 /**
- * op_add - sub of a and b
+ * op_sub - sub of a and b
  * @a: first number
  * @b: second number
  * Return: sub of the two integers
@@ -22,7 +22,7 @@ return (a - b);
 }
 
 /**
- * op_add - multiplication of a and b
+ * op_mul - multiplication of a and b
  * @a: first number
  * @b: second number
  * Return: multiplication of the two integers
@@ -33,10 +33,10 @@ return (a * b);
 }
 
 /**
- * op_add - multiplication of a and b
+ * op_div - division of a and b
  * @a: first number
  * @b: second number
- * Return: multiplication of the two integers
+ * Return: division of the two integers
  */
 int op_div(int a, int b)
 {
@@ -44,10 +44,10 @@ return (a / b);
 }
 
 /**
- * op_add - multiplication of a and b
+ * op_mod - modulation of a and b
  * @a: first number
  * @b: second number
- * Return: multiplication of the two integers
+ * Return: modulation of the two integers
  */
 int op_mod(int a, int b)
 {
