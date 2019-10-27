@@ -19,7 +19,7 @@ void print_c(va_list c)
  */
 void print_i(va_list i)
 {
-        printf("%d", va_arg(i, int));
+	printf("%d", va_arg(i, int));
 }
 
 /**
@@ -29,7 +29,7 @@ void print_i(va_list i)
  */
 void print_f(va_list f)
 {
-        printf("%f", va_arg(f, double));
+	printf("%f", va_arg(f, double));
 }
 
 /**
@@ -40,6 +40,7 @@ void print_f(va_list f)
 void print_s(va_list s)
 {
 	char *a = va_arg(s, char *);
+
 	if (a != NULL)
 		printf("%s", a);
 	else
