@@ -42,9 +42,11 @@ void print_s(va_list s)
 	char *a = va_arg(s, char *);
 
 	if (a != NULL)
+	{
 		printf("%s", a);
-	else
-		printf("(nil)");
+		return;
+	}
+	printf("(nil)");
 }
 
 
