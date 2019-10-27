@@ -1,10 +1,14 @@
 #ifndef _HEADER_
 #define _HEADER_
 #include <stdarg.h>
-
+/**
+ * struct stru - strcut
+ * @ch: type
+ * @n: function
+ */
 typedef struct stru
 {
-        char *ch;
+	char *ch;
 	void (*n)(va_list);
 } st;
 
