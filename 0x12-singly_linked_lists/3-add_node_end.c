@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * *add_node - adds a new node at the beginning of a list_t list
+ * *add_node_end - adds a new node at the beginning of a list_t list
  * @head: struct
  * @str: string
  * Return: returns the address of teh new element or NULL if it failed
