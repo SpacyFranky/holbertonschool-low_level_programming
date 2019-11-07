@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int mask;
+	unsigned long int mask;
 
 	if (n == 0)
 	{
