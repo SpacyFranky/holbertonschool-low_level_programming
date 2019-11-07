@@ -14,7 +14,28 @@ unsigned int power2(unsigned int a)
 		s = s * 2;
 	return (s);
 }
+/**
+ * tostring - converts string to integer
+ * @a: string to be converted.
+ * Return: converted string.
+ */
+int tostring(const char *a)
+{
+	int c, sign, offset, n;
 
+	if (a[0] == '-')
+		sign = -1;
+	if (sign == -1)
+		offset = 1;
+	else
+		offset = 0;
+	n = 0;
+	for (c = offset ; a[c] != '\0' ; c++)
+		n = n * 10 + a[c] - '0';
+	if (sign == -1)
+		n = -n;
+	return (n);
+}
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int
@@ -36,7 +57,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
-	x = atoi(b);
+	x = tostring(b);
 	i = 0;
 	s = 0;
 	while (x)
