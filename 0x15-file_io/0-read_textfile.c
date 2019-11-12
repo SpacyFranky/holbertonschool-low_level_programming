@@ -5,14 +5,16 @@
 #include <fcntl.h>
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints it to
+ * the POSIX standard output.
  * @filename: filename.
  * @letters: number of letters of the file.
  * Return: the actual number of letters it could read and print.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t f;
+	int f;
+	ssize_t r, w;
 	char *buf;
 
 	buf = malloc(sizeof(char) * letters);
@@ -23,13 +25,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	f = open(filename, O_RDONLY);
 	if (f == -1)
 		return (0);
-	read(f, buf, letters);
-	close(f);
-
-	f = open(filename, O_WRONLY, 0600);
-	if (f == -1)
+	r = read(f, buf, letters);
+	if (r == -1)
 		return (0);
-	write(f, buf, letters);
+
+	*(buf + r) = '\0';
+
+	w = write(STDOUT_FILENO, buf, r);
+	if (w == -1 || w != r)
+		return (0);
 	close(f);
-	return (letters);
+	return (w);
 }
