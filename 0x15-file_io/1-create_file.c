@@ -13,7 +13,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f, w, i;
+	int f, w;
 
 	if (filename == NULL)
 		return (-1);
@@ -24,12 +24,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		w = write(STDOUT_FILENO, "\0", STDOUT_FILENO);
 	else
-	{
-		for (i = 0 ; text_content[i] != '\0' ; i++)
-			;
-		i++;
-		w = write(STDOUT_FILENO, text_content, i);
-	}
+		w = write(STDOUT_FILENO, text_content, O_RDONLY);
 	if (w == -1)
 		return (-1);
 	return (1);
