@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * last_node - gets the last node of a doubly linked list.
+ * last_node_index - gets the last node of a doubly linked list.
  * @h: doubly linked list.
  * Return: last node of the list.
  */
