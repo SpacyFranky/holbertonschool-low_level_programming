@@ -1,6 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
+
+/**
+ * last_node - gets the last node of a doubly linked list.
+ * @h: doubly linked list.
+ * Return: last node of the list.
+ */
+dlistint_t *last_node(dlistint_t **h)
+{
+	dlistint_t *node = *h;
+
+	while (node != NULL)
+	{
+		node = node->next;
+	}
+	return (node);
+}
+
+
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position.
  * @h: doubly linked list.
@@ -28,9 +46,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			i++;
 		}
 		if (idx == 1)
+		{
 			add_dnodeint(&temp, n); /* insert at beginning */
-		else if (temp == /* last node */)
+			return (temp);
+		}
+		else if (temp == last_node(h) /* last node */)
+		{
 			add_dnodeint_end(&temp, n); /* insert at end */
+			return (temp);
+		}
 		else if (temp != NULL)
 		{
 			newnode->n = n;
@@ -41,7 +65,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				temp->next->prev = newnode;
 
 			temp->next = newnode;
-			return (*temp);
+			return (temp);
 		}
 		else
 			return (NULL);
