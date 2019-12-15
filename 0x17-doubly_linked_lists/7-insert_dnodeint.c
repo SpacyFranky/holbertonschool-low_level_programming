@@ -7,15 +7,17 @@
  * @h: doubly linked list.
  * Return: last node of the list.
  */
-dlistint_t *last_node(dlistint_t **h)
+unsigned int last_node_index(dlistint_t **h)
 {
+	unsigned int i = 0;
 	dlistint_t *node = *h;
 
 	while (node != NULL)
 	{
 		node = node->next;
+		i++;
 	}
-	return (node);
+	return (i);
 }
 
 
@@ -36,31 +38,28 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	if (h == NULL)
 		return (NULL);
-	i = 0;
-	while (i + 1 < idx  && temp != NULL)
+	if (idx == 0 && h != NULL)
 	{
+		return (add_dnodeint(h, n)); /* insert at beginning */
+	}
+	if (idx == last_node_index(h) /* last node */)
+	{
+		return (add_dnodeint_end(h, n)); /* insert at end */
+	}
+	while (temp != NULL)
+	{
+		if (idx == i)
+		{
+			newnode->n = n;
+			newnode->next = temp->next;
+			newnode->prev = temp;
+			if (temp->next != NULL)
+				temp->next->prev = newnode;
+			temp->next = newnode;
+			return (temp);
+		}
 		temp = temp->next;
 		i++;
-	}
-	if (idx == 0)
-	{
-		add_dnodeint(&temp, n); /* insert at beginning */
-		return (temp);
-	}
-	else if (temp == last_node(h) /* last node */)
-	{
-		add_dnodeint_end(&temp, n); /* insert at end */
-		return (temp);
-	}
-	else if (temp != NULL)
-	{
-		newnode->n = n;
-		newnode->next = temp->next;
-		newnode->prev = temp;
-		if (temp->next != NULL)
-			temp->next->prev = newnode;
-		temp->next = newnode;
-		return (temp);
 	}
 	return (NULL);
 }
