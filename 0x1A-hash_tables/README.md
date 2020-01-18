@@ -9,7 +9,7 @@
 # Requirements
 * Allowed editors: vi, vim, emacs
 * All files were compiled on Ubuntu 14.04 LTS
-* My programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+* My programs and functions were compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
 * All my files end with a new line
 * My code use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 * I am not allowed to use global variables
