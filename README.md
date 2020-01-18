@@ -1,1 +1,1 @@
-# This is reposiroty is about everything that is low-level programming.
+# This reposiroty is about everything that is low-level programming.
