@@ -1,1 +1,1 @@
-I hope i fix this
+# This is reposiroty is about everything that is low-level programming.
