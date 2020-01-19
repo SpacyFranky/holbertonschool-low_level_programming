@@ -7,13 +7,18 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *table;
+	hash_table_t *htable;
 
-	table = malloc(sizeof(hash_table_t) * size);
-	if (table == NULL)
+	htable = malloc(sizeof(hash_table_t) * size);
+	if (htable == NULL)
 	{
 		return (NULL);
 	}
-	table->size = size;
-	return (table);
+	htable->array = malloc(sizeof(hash_node_t) * size);
+	if (htable->array == NULL)
+	{
+		return(NULL);
+	}
+	htable->size = size;
+	return (htable);
 }
