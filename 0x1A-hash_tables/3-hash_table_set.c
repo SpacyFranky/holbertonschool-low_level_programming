@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	tmp = head[index];
 	while (head[index])
 	{
-		if (head[index]->key == key)
+		if (strcmp(head[index]->key, key) == 0)
 		{
 			free(head[index]->value);
 			free(newnode);
