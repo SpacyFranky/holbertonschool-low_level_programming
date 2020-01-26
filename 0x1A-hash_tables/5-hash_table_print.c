@@ -11,9 +11,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 
 	if (ht == NULL)
-		printf("{}\n");
+		return;
 	if (ht->array == NULL)
-		printf("{}\n");
+		return;
 	head = ht->array;
 	printf("{");
 	for (i = 0; i < ht->size; i++)
