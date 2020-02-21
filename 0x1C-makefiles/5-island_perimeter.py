@@ -9,6 +9,10 @@ def island_perimeter(grid):
        Args:
            grid (list of lists)
     """
+    if type(grid) is not list:
+        return(0)
+    if type(grid[0]) is not list:
+        return(0)
     s = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
