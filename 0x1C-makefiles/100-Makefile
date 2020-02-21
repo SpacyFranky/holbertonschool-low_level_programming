@@ -19,5 +19,4 @@ fclean:
 	$(RM) -f $(OBJ)
 
 .PHONY: re
-re: oclean $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+re: oclean all
