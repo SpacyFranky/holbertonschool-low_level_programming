@@ -44,19 +44,19 @@ int binary_search(int *array, size_t size, int value)
 	print_array(array, 0, size);
 	l = 0;
 	r = size - 1;
-	while (l <= r)
+	while (l < r)
 	{
 		m = (l + r) / 2;
-		if (array[m] < value)
+		if (array[m] == value)
 		{
-			l = m + 1;
+			return (m);
 		}
 		else if (array[m] > value)
 		{
 			r = m - 1;
 		}
 		else
-			return (m);
+			l = m + 1;
 		print_array(array, l, r + 1);
 	}
 	return (-1);
