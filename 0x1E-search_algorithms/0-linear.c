@@ -6,10 +6,15 @@
  * @array: array of integers
  * @size: size of the array
  * @value: value to search for
+ * Return: If value is not present in array or if array is NULL,
+ * your function must return -1
  */
 int linear_search(int *array, size_t size, int value)
 {
 	int *p, i;
+
+	if (array == NULL)
+		return (-1)
 
 	i = 0;
 	for (p = array; p < array + size; ++p)
